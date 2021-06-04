@@ -4,3 +4,7 @@
 [submodule "ShowtimeExtras"]
 	path = ShowtimeExtras
 	url = https://github.com/LorittaBot/ShowtimeExtras
+[submodule "lovely-style"]
+	path = backend/src/main/sass/lovely-style
+	url = https://github.com/PerfectDreams/lovely-style
+
