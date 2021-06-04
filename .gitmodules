@@ -1,0 +1,6 @@
+[submodule "LorittaLocales"]
+	path = LorittaLocales
+	url = https://github.com/LorittaBot/LorittaLocales
+[submodule "ShowtimeExtras"]
+	path = ShowtimeExtras
+	url = https://github.com/LorittaBot/ShowtimeExtras
