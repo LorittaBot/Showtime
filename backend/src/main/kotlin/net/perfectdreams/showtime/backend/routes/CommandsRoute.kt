@@ -20,16 +20,22 @@ import net.perfectdreams.showtime.backend.views.CommandsView
 import java.io.File
 
 class CommandsRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, RoutePath.COMMANDS) {
-    val commands: List<CommandInfo> by lazy { Json.decodeFromString(File("./default.json").readText()) }
+    val commands: List<CommandInfo> by lazy {
+        Json.decodeFromString<List<CommandInfo>>(
+            ShowtimeBackend::class.java.getResourceAsStream("/commands/default.json")!!
+                .readAllBytes()
+                .toString(Charsets.UTF_8)
+        )
+    }
 
     override suspend fun onLocalizedRequest(call: ApplicationCall, locale: BaseLocale) {
         try {
             val additionalCommandInfo = ConfigFactory.parseString(
                 // Workaround because HOCON can't deserialize root lists (sad)
-                "additionalCommandInfos=" + File("./commands-info.conf")
-                    .readText()
-            )
-                .resolve()
+                "additionalCommandInfos=" + ShowtimeBackend::class.java.getResourceAsStream("/commands/commands-info.conf")!!
+                    .readAllBytes()
+                    .toString(Charsets.UTF_8)
+            ).resolve()
 
             // Workaround because HOCON can't deserialize root lists (sad)
             val config = Hocon.decodeFromConfig<AdditionalCommandInfoConfigs>(additionalCommandInfo)

@@ -7,4 +7,4 @@ class HttpRedirectException(val location: String, val permanent: Boolean = false
 fun redirect(location: String, permanent: Boolean = false): Nothing = throw HttpRedirectException(location, permanent)
 
 val ApplicationRequest.userTheme
-get() = cookies["userTheme"]?.let { WebsiteTheme.valueOf(it) } ?: WebsiteTheme.DEFAULT
+    get() = cookies["userTheme"]?.let { WebsiteTheme.valueOf(it) } ?: WebsiteTheme.DEFAULT
