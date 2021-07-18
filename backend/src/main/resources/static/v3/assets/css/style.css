@@ -352,6 +352,20 @@ hr {
   border-radius: 7px;
   /**** ./cleaned.css ***/
   /*** uncss> filename: discord-style-original.css ***/
+  /* .clickable-3Ya1ho {
+      cursor: pointer
+  }&.background-opacity-high .messageGroupBlocked-2lRk_V,&.background-opacity-low .messageGroupBlocked-2lRk_V,&.background-opacity-medium .messageGroupBlocked-2lRk_V {
+      background-color: rgba(54,57,63,.3);
+      border-color: rgba(47,49,54,.2)
+  }&.background-opacity-high .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr,&.background-opacity-low .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr,&.background-opacity-medium .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr {
+      background-color: transparent;
+      color: #f6f6f7
+  }&.background-opacity-high .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover,&.background-opacity-low .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover,&.background-opacity-medium .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover {
+      background: rgba(54,57,63,.4)
+  } */
+  /* &.title-eQ0ZMf {
+      color: var(--header-primary)
+  } */
   /*# sourceMappingURL=0.47d5abbc41994adf9181.css.map*/
   margin: auto;
 }
@@ -970,20 +984,6 @@ hr {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
-.message-preview .clickable-3Ya1ho {
-  cursor: pointer;
-}
-.message-preview.background-opacity-high .messageGroupBlocked-2lRk_V, .message-preview.background-opacity-low .messageGroupBlocked-2lRk_V, .message-preview.background-opacity-medium .messageGroupBlocked-2lRk_V {
-  background-color: rgba(54, 57, 63, 0.3);
-  border-color: rgba(47, 49, 54, 0.2);
-}
-.message-preview.background-opacity-high .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr, .message-preview.background-opacity-low .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr, .message-preview.background-opacity-medium .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr {
-  background-color: transparent;
-  color: #f6f6f7;
-}
-.message-preview.background-opacity-high .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover, .message-preview.background-opacity-low .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover, .message-preview.background-opacity-medium .messageGroupBlocked-2lRk_V .messageGroupBlockedBtn-2PRkNr:hover {
-  background: rgba(54, 57, 63, 0.4);
-}
 .message-preview .emoji {
   -o-object-fit: contain;
   object-fit: contain;
@@ -1471,9 +1471,6 @@ hr {
 .message-preview .theme-dark .mentioned-xhSam7 .mention.interactive:hover, .message-preview .theme-light .mentioned-xhSam7 .mention.interactive:hover {
   color: #7289da;
   text-decoration: underline;
-}
-.message-preview.title-eQ0ZMf {
-  color: var(--header-primary);
 }
 .message-preview strong {
   font-weight: 600;
