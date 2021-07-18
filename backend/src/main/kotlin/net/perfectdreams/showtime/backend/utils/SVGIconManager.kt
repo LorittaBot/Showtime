@@ -51,6 +51,7 @@ class SVGIconManager(val showtime: ShowtimeBackend) {
     val rocket = register("rocket", "fontawesome5/solid/rocket.svg")
     val doorOpen = register("door-open", "fontawesome5/solid/door-open.svg")
     val book = register("book", "fontawesome5/solid/book.svg")
+    val dizzy = register("dizzy", "fontawesome5/solid/dizzy.svg")
 
     val smallDiamond = register("small-diamond", "twemoji-master/1f539.svg", SVGOptions.REMOVE_FILLS)
 
