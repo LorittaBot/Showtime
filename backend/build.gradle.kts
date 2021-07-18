@@ -5,7 +5,7 @@ plugins {
     kotlin("plugin.serialization") version Versions.KOTLIN
     id("com.google.cloud.tools.jib") version Versions.JIB
     // This plugin is deprecated, but it still works
-    id("com.github.salomonbrys.gradle.sass") version "1.2.0"
+    // id("com.github.salomonbrys.gradle.sass") version "1.2.0"
 }
 
 group = "net.perfectdreams.showtime"
@@ -42,12 +42,12 @@ dependencies {
     api("com.vladsch.flexmark:flexmark-all:0.62.2")
 }
 
-sassCompile {
+/* sassCompile {
     include {
         // We only want to compile the root "style.scss" file!
         it.file.name == "style.scss"
     }
-}
+} */
 
 jib {
     container {
@@ -82,7 +82,7 @@ tasks {
     processResources {
         // We need to wait until the JS build finishes and the SASS files are generated
         dependsOn(jsBrowserProductionWebpack)
-        dependsOn(named<com.github.salomonbrys.gradle.sass.SassTask>("sassCompile"))
+        // dependsOn(named<com.github.salomonbrys.gradle.sass.SassTask>("sassCompile"))
 
         // Copy the output from the frontend task to the backend resources
         from(jsBrowserProductionWebpack.destinationDirectory) {
