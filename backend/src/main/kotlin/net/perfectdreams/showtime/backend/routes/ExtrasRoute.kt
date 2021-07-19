@@ -163,8 +163,12 @@ class ExtrasRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, Rout
                     }
 
                     // Load tooltip file
+                    println("Loading tooltip file ${arguments[1]}")
                     val tooltipsConfig = Hocon.decodeFromConfig<TooltipsConfig>(
-                        ConfigFactory.parseResources("/extras/messages/${arguments[1]}")
+                        ConfigFactory.parseResources(
+                            ShowtimeBackend::class.java,
+                            "/extras/messages/${arguments[1]}"
+                        )
                             .resolve()
                     )
 
