@@ -18,14 +18,12 @@ import net.perfectdreams.showtime.backend.utils.extras.ExtrasUtils
 import net.perfectdreams.showtime.backend.utils.NitroPayAdGenerator
 import net.perfectdreams.showtime.backend.utils.NitroPayAdSize
 import net.perfectdreams.showtime.backend.utils.extras.TooltipsConfig
-import net.perfectdreams.showtime.backend.utils.extras.dynamic.OfficialIllustrationsDynamicExtras
 import net.perfectdreams.showtime.backend.utils.generateNitroPayAd
 import net.perfectdreams.showtime.backend.utils.userTheme
 import net.perfectdreams.showtime.backend.views.ExtrasView
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
-import java.io.File
 
 class ExtrasRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, RoutePath.EXTRAS) {
     override suspend fun onLocalizedRequest(call: ApplicationCall, locale: BaseLocale) {
@@ -126,7 +124,7 @@ class ExtrasRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, Rout
 
                     // Load HTML
                     val messageInput = Jsoup.parse(
-                        ShowtimeBackend::class.java.getResourceAsStream("/messages/${arguments[0]}")!!
+                        ShowtimeBackend::class.java.getResourceAsStream("/extras/messages/${arguments[0]}")!!
                             .readAllBytes()
                             .toString(Charsets.UTF_8)
                     ).body()
@@ -166,7 +164,7 @@ class ExtrasRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, Rout
 
                     // Load tooltip file
                     val tooltipsConfig = Hocon.decodeFromConfig<TooltipsConfig>(
-                        ConfigFactory.parseResources("/messages/${arguments[1]}")
+                        ConfigFactory.parseResources("/extras/messages/${arguments[1]}")
                             .resolve()
                     )
 
