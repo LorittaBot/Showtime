@@ -79,6 +79,8 @@ tasks {
         mapOf()
     )
 
+    val sass = sassTask("style.scss")
+
     processResources {
         // We need to wait until the JS build finishes and the SASS files are generated
         dependsOn(jsBrowserProductionWebpack)
@@ -98,5 +100,6 @@ tasks {
     "build" {
         // This should be ran BEFORE the JAR is compiled!
         dependsOn(runnableJar)
+        dependsOn(sass)
     }
 }
