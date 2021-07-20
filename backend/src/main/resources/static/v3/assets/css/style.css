@@ -1809,6 +1809,9 @@ lori-sidebar-wrapper section.right-sidebar .contents {
   padding: 0px 5% 0px 5%;
   flex-grow: 1;
   width: 100%;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
 }
 lori-sidebar-wrapper section.right-sidebar .contents img {
   max-width: 100%;
