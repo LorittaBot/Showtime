@@ -35,14 +35,14 @@ kotlin {
 
         jvm().compilations["main"].defaultSourceSet {
             dependencies {
-                api("io.github.microutils:kotlin-logging-jvm:2.0.4")
+                api("io.github.microutils:kotlin-logging-jvm:2.1.21")
             }
         }
 
         js().compilations["main"].defaultSourceSet {
             dependencies {
                 implementation(npm("buffer", "5.6.1"))
-                api("io.github.microutils:kotlin-logging-js:2.0.4")
+                api("io.github.microutils:kotlin-logging-js:2.1.21")
             }
         }
 

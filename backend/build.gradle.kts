@@ -14,8 +14,8 @@ dependencies {
     api(project(":web-common"))
 
     // Logging Stuff
-    implementation("ch.qos.logback:logback-classic:1.3.0-alpha5")
-    implementation("io.github.microutils:kotlin-logging:1.8.3")
+    implementation("ch.qos.logback:logback-classic:1.3.0-alpha14")
+    implementation("io.github.microutils:kotlin-logging:2.1.21")
 
     // Ktor
     implementation("io.ktor:ktor-server-netty:${Versions.KTOR}")
@@ -27,7 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.KOTLIN_SERIALIZATION}")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-hocon:${Versions.KOTLIN_SERIALIZATION}")
 
-    implementation("org.jsoup:jsoup:1.13.1")
+    implementation("org.jsoup:jsoup:1.14.3")
 
     // YAML
     implementation("org.yaml:snakeyaml:1.27")
@@ -37,7 +37,7 @@ dependencies {
 
     api("commons-codec:commons-codec:1.15")
 
-    api("com.vladsch.flexmark:flexmark-all:0.62.2")
+    api("com.vladsch.flexmark:flexmark-all:0.64.0")
 }
 
 jib {
