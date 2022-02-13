@@ -84,7 +84,7 @@ class SVGIconManager(val showtime: ShowtimeBackend) {
         )
 
         val svgTag = document.getElementsByTag("svg")
-                .first()
+                .first()!!
 
         svgTag.addClass("icon") // Add the "icon" class name to the SVG root, this helps us styling it via CSS
                 .addClass("icon-$name") // Also add the icon name to the SVG root, so we can individually style with CSS

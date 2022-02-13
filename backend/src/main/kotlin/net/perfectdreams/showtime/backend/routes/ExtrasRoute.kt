@@ -174,7 +174,7 @@ class ExtrasRoute(val showtime: ShowtimeBackend) : LocalizedRoute(showtime, Rout
 
                     for (tooltip in tooltipsConfig.tooltips) {
                         println("finding ${tooltip.match}")
-                        val matchedElementForTooltip = messageInput.selectFirst(tooltip.match)
+                        val matchedElementForTooltip = messageInput.selectFirst(tooltip.match)!!
 
                         // Now we are going to add the tooltip stuff!
                         matchedElementForTooltip.addClass("tooltip")
